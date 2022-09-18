@@ -69,8 +69,7 @@
 - 「免费 Top100 Hook」列表页面做了【图片懒加载】功能，且做了背景灰色占位处理（当网络较慢时避免图标显示空白）；
 - 【Search 搜索栏】有悬浮定位顶部效果；
 - 项目引入【@vitejs/plugin-legacy】：为打包后的文件提供传统浏览器兼容性支持；
-- 配置多环境
-
+- 配置多环境：参考 package.json 以及.env.[local/test/prod]文件
 - Vue3 中文官网：https://cn.vuejs.org/
 - Vant 中文官网：https://vant-contrib.gitee.io/vant/#/zh-CN/home
 - Swiper-vue 官网：https://swiperjs.com/vue

@@ -8,7 +8,7 @@ import { getHotTop, getDetailsByIds } from "./api";
 import type { SimpleTopList, AppDetailsInfo, StateType } from "./type";
 
 export default defineComponent({
-  name: "Home",
+  name: "IndexView",
   components: {
     TopSwipe,
   },
