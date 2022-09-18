@@ -10,7 +10,6 @@ declare module '@vue/runtime-core' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TopSwipe: typeof import('./src/components/TopSwipe.vue')['default']
-    VanButton: typeof import('vant/es')['Button']
     VanImage: typeof import('vant/es')['Image']
   }
 }

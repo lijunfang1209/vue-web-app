@@ -8,7 +8,7 @@ import { getHotTop, getDetailsByIds } from "./api";
 import type { SimpleTopList, AppDetailsInfo, StateType } from "./type";
 
 export default defineComponent({
-  name: "IndexView",
+  name: "Home",
   components: {
     TopSwipe,
   },
@@ -83,16 +83,6 @@ export default defineComponent({
             </>
           }
           {freeTopListHook()}
-          
-          {
-            /*
-            <div class="env-test">
-              <van-button plain hairline type="primary" size="mini" class="linkto">
-                <router-link to='/about'>To About Page</router-link>
-              </van-button>
-            </div>
-            */
-          }
         </div>
       );
     };
@@ -168,10 +158,6 @@ export default defineComponent({
         }
       }
     }
-  }
-  .env-test {
-    padding: 10px;
-    text-align: center;
   }
 }
 </style>
