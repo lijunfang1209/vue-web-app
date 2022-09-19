@@ -63,7 +63,7 @@ export default defineComponent({
       getHotTop(10).then(async (res) => {
         // 根据ids进行详情查询
         let tempArr = await state.operateDetailsByIds(res.ids.join(","), res.list);
-        hotTopList.value = [].concat(tempArr);
+        hotTopList.value = tempArr as SimpleTopList[];
       });
     };
     getHotList();

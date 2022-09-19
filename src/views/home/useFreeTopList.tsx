@@ -23,7 +23,7 @@ export const useFreeTopList = (state: StateType) => {
     getFreeTop(100).then(async (res) => {
       // 根据ids进行详情查询
       const tempArr = state.operateDetailsByIds && await state.operateDetailsByIds(res.ids.join(","), res.list);
-      freeTopList.value = [].concat(tempArr as []);
+      freeTopList.value = tempArr as SimpleTopList[];
       finished.value = true;
     });
   };
