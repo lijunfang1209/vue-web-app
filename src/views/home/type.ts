@@ -23,7 +23,6 @@ export interface SimpleTopList {
   userRatingCount?: number;
   description?: string;
   sellerName?: string;
-  [props: string]: any;
 }
 
 export interface TopListRes {

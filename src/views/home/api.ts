@@ -1,18 +1,15 @@
 import api from "@/plugins/plAxios/index";
+import type { PlAxiosPromise, PlResponsePromise } from "@/plugins/plAxios/type";
 import type { TopListRes, AppDetailsInfoRes, TopResItem, SimpleTopList } from "./type";
 
 interface RtnType {
   ids: string[];
   list: SimpleTopList[]
 }
-
-type PromiseTopListResType = PL_AXIOS.PlAxiosPromise<TopListRes>;
-type PlResponsePromise = PL_AXIOS.PlResponsePromise;
-
 // 对原始数据进行过滤处理
-const topDataFilter = async (res: PromiseTopListResType) => {
-  let topDataList = await res.then((data: PlResponsePromise) => {
-    return data.feed?.entry || []
+const topDataFilter = async (res: PlAxiosPromise<TopListRes>) => {
+  let topDataList:TopResItem[] = await res.then((data) => {
+    return data?.feed?.entry || []
   });
   const rtn: RtnType = {
     ids: [],
@@ -29,7 +26,7 @@ const topDataFilter = async (res: PromiseTopListResType) => {
       // 应用名
       name: item["im:name"].label,
       // 开发者名
-      artist: item["im:artist"],
+      artist: item["im:artist"].label,
       // 应用描述
       summary: item.summary.label,
     };
@@ -43,14 +40,14 @@ export const getHotTop = (limit: number) => {
     url: `rss/topgrossingapplications/limit=${limit}/json`,
   };
 
-  return topDataFilter(api.get<TopListRes>(option) as PromiseTopListResType);
+  return topDataFilter(api.get<TopListRes>(option));
 };
 // 免费 Top100
 export const getFreeTop = (limit: number) => {
   const option = {
     url: `rss/topfreeapplications/limit=${limit}/json`,
   };
-  return topDataFilter(api.get<TopListRes>(option) as PromiseTopListResType); // PlAxiosPromise<T>
+  return topDataFilter(api.get<TopListRes>(option)); // PlAxiosPromise<T>
 };
 // 搜索结果
 export const getDetailsByIds = (ids: string) => {

@@ -1,7 +1,7 @@
-import type { PlAxiosRequestConfig, PlAxiosPromise } from "./type";
+import type {PlAxiosRequestConfig,PlAxiosPromise } from "./type";
 import config from "./config";
 import http from "./http";
-const httpClient = (option: PlAxiosRequestConfig) => {
+const httpClient = (option:PlAxiosRequestConfig) => {
   option.baseURL = config.baseUrl;
   option.headers = Object.assign({}, config.defaultHeaders(), option.headers);
   return http(option);
