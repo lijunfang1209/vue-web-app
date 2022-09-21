@@ -19,7 +19,7 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/css/free-mode";
