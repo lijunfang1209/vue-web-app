@@ -1,6 +1,18 @@
 {
   "files": [],
   "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "types"],
+  "compilerOptions": {
+    "jsx": "preserve",
+    "composite": true,
+    // "strict": false,
+    // "skipLibCheck": true,
+    // "declaration": false,
+    // "noLib": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+  },
   "references": [
     {
       "path": "./tsconfig.config.json"
