@@ -8,46 +8,7 @@ VUE3 + ElementUI + axios + Typescript
 
 ## 二、目录结构规范
 
-- src/api: api请求
-- src/assets: 静态资源，包括图片相关
-  - img
-  - js
-  - video
-- src/components: 组件相关
-  - TopSwipe.vue
-  - searchForm.vue
-- src/directives: 全局的自定义指令，回车聚焦，改变大小等
-  - enterFoucs.ts
-  - elementSizets.ts
-- src/plugins: 相关插件依赖的封装文件夹目录
-  - plAxios: 封装 Axios
-    - config.ts: 配置 axios 的 baseUrl，请求头 Headers 等；
-    - http.ts: 封装 axios 的请求拦截和响应拦截等；
-    - index.ts: 集成 axios 实例，进一步封装 get/post 等请求方法；
-    - type.ts: 定义相关 TS 类型
-- src/router: 页面路由相关
-  - index.ts: 基础路由配置
-  - guard.ts:  路由守卫
-- src/stores: vue 存储库 pinia 相关
-  - index.ts
-  - modules:pinia模块
-- src/styless:全局样式
-  - variables.scss:自定义主题
-  - base.scss:基础样式
-  - page.scss:页面公共样式
-- src/utils: 工具类函数（暂未使用）
-- src/views: 页面相关文件
-  - home 文件夹:
-    - api.ts: 包含封装的请求接口函数以及数据过滤工具函数；
-    - index.vue: UI 主页，集成「搜索 Hook」/「热门 top10 组件」/「免费 top100 Hook」
-    - useFreeTopList.tsx: 「免费 top100 Hook」
-    - useSearch.tsx:「搜索 Hook」
-    - type.ts: TS 相关的类型检测
-  - AboutView.vue: 路由测试文件（脚手架自动生成）。
-- src/App.vue: 组件主入口，页面入口文件
-- src/main.ts: vue3 项目初始化入口文件
-  - vue 初始化 / 引入 vant 组件库 / 引入设备适配工具 / 引入全局 sass 样式文件 / 引入 vue-router
-- types 文件夹：定义一些全局的 TS 类型声明等；
+<img src="https://raw.githubusercontent.com/lijunfang1209/vue-web-app/main/src/assets/projectStruct.png"/>
 
 ## 三、开发规范：
 ### 1. css开发规范
