@@ -3,7 +3,7 @@
   "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "types"],
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
-    "jsx": "preserve",
+    // "jsx": "preserve",
     "composite": true,
     "baseUrl": ".",
     "paths": {
