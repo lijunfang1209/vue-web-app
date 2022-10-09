@@ -8,7 +8,7 @@ VUE3 + ElementUI + axios + Typescript
 
 ## 二、目录结构规范
 
-<img src="https://raw.githubusercontent.com/lijunfang1209/vue-web-app/main/src/assets/projectStruct.png"/>
+<img src="https://raw.githubusercontent.com/lijunfang1209/vue-web-app/main/docs/image/projectStruct.png"/>
 
 ## 三、开发规范：
 ### 1. css开发规范
